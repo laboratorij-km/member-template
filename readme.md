@@ -1,6 +1,6 @@
 # Navodila za nastavitev osebne Hugo strani laboratorija
 
-V tem dokumentu so navedena navodila, kako nastaviti in uporabljati svojo Hugo stran za laboratorij. Vsak član laboratorija bo imel svojo Hugo stran, ki bo gostovana pod domeno **organization_name.github.io/member_repository**.
+V tem dokumentu so navedena navodila, kako nastaviti in uporabljati svojo Hugo stran za laboratorij. Vsak član laboratorija bo imel svojo Hugo stran, ki bo gostovana pod domeno **laboratorij-km.github.io/member_repository**.
 
 ## 1. Kopiranje predloga repozitorija
 
@@ -26,7 +26,7 @@ cd ime-priimek
 
 ## 3. Urejanje osebne vsebine
 
-Vse spremembe boste izvajali znotraj svojega repozitorija. Vaša osebna stran v Hugo je zasnovana tako, da omogoča preprosto upravljanje vsebin. Spodaj so podana navodila za pisanje objav in nastavitev strani.
+Vse spremembe boste izvajali znotraj svojega repozitorija. Vaša osebna stran v Hugo je zasnovana tako, da omogoča preprosto upravljanje vsebin. Spodaj so podana navodila za pisanje objav in nastavitev strani. Pri urejanju vsebine v Markdownu lahko uporabite HTML v Markdown converter-ji, kot je npr. **[https://htmlmarkdown.com/](https://htmlmarkdown.com/)**, če imate vsebino v HTML obliki, ki jo želite pretvoriti.
 
 ### 1. Urejanje glavne biografije
 
@@ -46,7 +46,7 @@ title = "Ime Priimek"
 
 # Dobrodošli
 
-Sem Ime Priimek, raziskovalec v Laboratoriju za računalništvo in informatiko.
+Sem Ime Priimek, raziskovalec v Laboratoriju za kognitivno modeliranje.
 ```
 
 ### 2. Ustvarjanje novih strani
@@ -55,12 +55,12 @@ Vsaka dodatna stran, ki jo želite imeti na svojem profilu, potrebuje svojo mapo
 
 #### Koraki za ustvarjanje nove strani:
 
-1. Če želite ustvariti novo stran, na primer **"Predavanja"**, ustvarite naslednjo strukturo:
+1. Če želite ustvariti novo stran, na primer **"Lecturing"**, ustvarite naslednjo strukturo:
    - **content/lecturing/\_index.md**
 2. Za vsako podstran znotraj te strani (npr. posamezni predmeti) lahko ustvarite dodatne datoteke, na primer:
    - **content/lecturing/subject1.md**
 
-#### Primer nove strani **"Predavanja"**
+#### Primer nove strani **"Lecturing"**
 
 ```bash
 hugo new content/lecturing/_index.md
@@ -70,7 +70,7 @@ hugo new content/lecturing/_index.md
 
 ```markdown
 +++
-title = "Predavanja"
+title = "Lecturing"
 +++
 
 # Moji predmeti
@@ -93,7 +93,25 @@ title = "Predmet 1"
 Podroben opis predmeta.
 ```
 
-### 3. Urejanje datoteke hugo.toml
+### 3. Dodajanje datotek in slik
+
+Vsaka stran na vašem profilu naj vsebuje pripadajoče datoteke, kot so slike, v isti mapi, kjer se nahaja vsebina strani. Na ta način bodo slike in druge datoteke ustrezno povezane s posamezno stranjo.
+
+#### Koraki za dodajanje slik na stran:
+
+1. Če želite dodati sliko na stran, na primer na glavno stran Lecturing (content/lecturing/\_index.md), morate sliko shraniti v isto mapo.
+
+- Primer: **content/lecturing/img.jpg** ali **content/lecturing/images/img.jpg**
+
+2. Nato v vaši Markdown datoteki (npr. **content/lecturing/\_index.md**) vključite sliko z naslednjim ukazom:
+
+```markdown
+![Opis slike](img.jpg)
+ali
+![Opis slike](img/img.jpg)
+```
+
+### 4. Urejanje datoteke hugo.toml
 
 Vsakič, ko dodate novo stran, morate posodobiti datoteko hugo.toml, da se nova stran prikaže v meniju. Poleg tega morate prilagoditi naslov, baseURL, in meni.
 
@@ -131,7 +149,7 @@ theme = "member-theme"
     weight = 1
 
   [[menu.main]]
-    name = "Predavanja"
+    name = "Lecturing"
     url = "/lecturing/"
     weight = 2
 
@@ -142,11 +160,11 @@ theme = "member-theme"
 
 ```
 
-### 4. Testiranje lokalnih sprememb
+### 5. Testiranje lokalnih sprememb
 
 Preden pošljete svoje spremembe v GitHub, je priporočljivo, da svojo stran preizkusite lokalno z ukazom Hugo, kar vam omogoča hitrejši pregled in odkrivanje morebitnih napak.
 
-#### 4.1 Uporaba "hugo server"
+#### 5.1 Uporaba "hugo server"
 
 Ukaz **"hugo server"** vam omogoča, da zaženete lokalni strežnik, kjer lahko pregledate svojo stran, ne da bi jo objavili.
 
@@ -161,7 +179,7 @@ hugo server
 
 Ta ukaz bo ustvaril lokalni strežnik, ki bo na voljo na naslovu http://localhost:1313/. Stran bo samodejno osvežena, če boste v datotekah izvedli spremembe. To vam omogoča hitrejše testiranje vsebine.
 
-#### 4.2 Uporaba "hugo server -D"
+#### 5.2 Uporaba "hugo server -D"
 
 Ko razvijate novo vsebino, lahko želite testirati strani ali objave, ki še niso objavljene, ker so označene kot osnutki. V ta namen uporabite ukaz **"hugo server -D"**, ki omogoča prikaz osnutkov.
 
@@ -175,7 +193,7 @@ hugo server -D
 
 S tem ukazom bodo vidne tudi vse strani ali objave, ki imajo v svojem frontmatter parametru draft = true.
 
-#### 4.3 Kaj pomeni parameter "draft"?
+#### 5.3 Kaj pomeni parameter "draft"?
 
 V vsaki objavi ali strani, ki jo ustvarite v Hugo, lahko uporabite parameter draft, ki določa, ali je stran pripravljena za objavo ali je še v fazi osnutka.
 
@@ -196,7 +214,7 @@ Ko ste pripravljeni, da stran objavite, preprosto spremenite vrednost parametra 
 
 ## 4. Dodajanje profila v glavni repozitorij
 
-1. Pojdite na glavni repozitorij laboratorija organization_name.github.io.
+1. Pojdite na glavni repozitorij laboratorija laboratorij-km.github.io.
 2. Poiščite datoteko **data/members.yaml**, kjer se hranijo podatki o vseh članih laboratorija.
 3. Dodajte svoje podatke, kot v spodnjem primeru:
 
