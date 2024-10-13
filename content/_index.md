@@ -8,21 +8,27 @@ V tem dokumentu so navedena navodila, kako nastaviti in uporabljati svojo Hugo s
 2. Odprite [predlogo Hugo strani](https://github.com/laboratorij-km/member-template), ki je na voljo v repozitoriju.
 3. Kliknite gumb **Use this template**.
 4. Ustvarite novo ime za vaš osebni repozitorij. Priporočljivo je, da uporabite svoje osebno ime, na primer: **ime-priimek**
-5. Preverite, da je izbrana možnost Public repository, in kliknite Create repository
+5. Preverite, da je izbrana možnost Public repository, ter da je **owner laboratorij-km** in kliknite Create repository
 
 ## 2. Kloniranje repozitorija
 
-1. Odprite terminal ali ukazno vrstico in klonirajte svoj novoustvarjeni repozitorij na lokalni računalnik:
+### 1. Odprite terminal ali ukazno vrstico in klonirajte svoj novoustvarjeni repozitorij na lokalni računalnik:
 
 ```bash
 git clone https://github.com/laboratorij-km/ime-priimek.git
 ```
 
-2. Premaknite se v imenik repozitorija:
+### 2. Premaknite se v imenik repozitorija:
 
 ```bash
 cd ime-priimek
 ```
+
+### 3. Omogočanje GitHub Pages in GitHub Actions
+
+1. Pojdite na nastavitve vašega repozitorija v GitHub.
+2. Izberite zavihek **Pages**.
+3. V razdelku Source izberite **GitHub Actions** kot vir za GitHub Pages.
 
 ## 3. Urejanje osebne vsebine
 
@@ -110,6 +116,20 @@ Vsaka stran na vašem profilu naj vsebuje pripadajoče datoteke, kot so slike, v
 ali
 ![Opis slike](img/img.jpg)
 ```
+
+#### Dodajanje datotek in slik neposredno iz OneDrive:
+
+1. Če želite dodati slike ali datoteke iz OneDrive, pojdite na svojo datoteko v OneDrive in ustvarite **embed** link.
+2. To storite tako, da v OneDrive izberete datoteko, ter na vrhu strani izberite **Embed**.
+3. Kopirajte in prilepite povezvo v svojo markdown datoteko.
+
+Primer:
+
+```markdown
+![FRI logo](https://1drv.ms/i/s!AnTtkNv__VGYgmWLhKoip-3jZL0j?embed=1&width=620&height=259)
+```
+
+![FRI logo](https://1drv.ms/i/s!AnTtkNv__VGYgmWLhKoip-3jZL0j?embed=1&width=620&height=259)
 
 ### 4. Urejanje datoteke hugo.toml
 
