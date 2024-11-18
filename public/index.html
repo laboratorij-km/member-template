@@ -8,31 +8,36 @@
 </head>
 <body><div id="masthead" class="container-fluid border-bottom">
   <div class="">
-    <nav class="navbar navbar-expand-lg ">
-      <button class="navbar-toggler mx-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg">
+      <button
+        class="navbar-toggler mx-5"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="">
-        <a href="/ime-priimek/">
-          <img src="/ime-priimek/img/logos/lkm-logo.png" alt="Faculty Logo" class="img-fluid" style="max-height: 100px;">
+        <a href="https://laboratorij-km.github.io/">
+          <img src="/ime-priimek/img/logos/lkm-logo.png" alt="Faculty Logo"
+          class="img-fluid" style="max-height: 100px;">
         </a>
       </div>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
-           
-          
-          
+            
           <li class="nav-item">
             <a
               class='nav-link '
               href="http://localhost:1313/ime-priimek/"
             >
-              Home
+              About
             </a>
           </li>
-           
-          
-          
+            
           <li class="nav-item">
             <a
               class='nav-link '
@@ -41,9 +46,7 @@
               Lecturing
             </a>
           </li>
-           
-          
-          
+            
           <li class="nav-item">
             <a
               class='nav-link '
@@ -53,12 +56,11 @@
             </a>
           </li>
            
-          
         </ul>
-       
       </div>
-      <div class=" px-5 d-none d-lg-block">
-        <img src="/ime-priimek/img/logos/fri_logo_trans.png" alt="Faculty Logo" class="img-fluid" style="max-height: 100px;">
+      <div class="px-5 d-none d-lg-block">
+        <img src="/ime-priimek/img/logos/fri_logo_trans.png" alt="Faculty
+        Logo" class="img-fluid" style="max-height: 100px;">
       </div>
     </nav>
   </div>
@@ -71,23 +73,43 @@
     <div class="col-lg-12"><h1 id="navodila-za-nastavitev-osebne-hugo-strani-laboratorija">Navodila za nastavitev osebne Hugo strani laboratorija</h1>
 <p>V tem dokumentu so navedena navodila, kako nastaviti in uporabljati svojo Hugo stran za laboratorij. Vsak član laboratorija bo imel svojo Hugo stran, ki bo gostovana pod domeno <strong>laboratorij-km.github.io/member_repository</strong>.</p>
 <h2 id="1-kopiranje-predloga-repozitorija">1. Kopiranje predloga repozitorija</h2>
+<h3 id="a-kako-uporabiti-privzeti-predlog">A. Kako uporabiti privzeti predlog</h3>
 <ol>
 <li>Prijavite se v GitHub in pojdite na GitHub organizacijo laboratorija.</li>
 <li>Odprite <a href="https://github.com/laboratorij-km/member-template">predlogo Hugo strani</a>, ki je na voljo v repozitoriju.</li>
 <li>Kliknite gumb <strong>Use this template</strong>.</li>
 <li>Ustvarite novo ime za vaš osebni repozitorij. Priporočljivo je, da uporabite svoje osebno ime, na primer: <strong>ime-priimek</strong></li>
-<li>Preverite, da je izbrana možnost Public repository, in kliknite Create repository</li>
+<li>Preverite, da je izbrana možnost Public repository, ter da je <strong>owner laboratorij-km</strong> in kliknite Create repository</li>
+</ol>
+<h3 id="b-kako-omogočiti-drugim-članom-uporabo-vašega-repozitorija-kot-predloge">B. Kako omogočiti drugim članom uporabo vašega repozitorija kot predloge</h3>
+<ol>
+<li>Prijavite se v GitHub in pojdite na GitHub organizacijo laboratorija.</li>
+<li>Odprite vaš repozitorij, ki ga želite omogočiti kot predlogo.</li>
+<li>Pojdite na <strong>Settings</strong> (nastavitve) vašega repozitorija.</li>
+<li>Pomaknite se navzdol do razdelka <strong>Template repository</strong> in označite možnost <strong>This repository is a template</strong>.</li>
+<li>Kliknite <strong>Save changes</strong>.</li>
+</ol>
+<p>Po tem bo vaš repozitorij na voljo kot predloga za druge člane laboratorija.</p>
+<h3 id="c-kako-uporabiti-repozitorij-drugega-člana-kot-predlogo">C. Kako uporabiti repozitorij drugega člana kot predlogo</h3>
+<ol>
+<li>Prijavite se v GitHub in pojdite na GitHub organizacijo laboratorija.</li>
+<li>Odprite repozitorij, ki ga želite uporabiti kot predlogo.</li>
+<li>Kliknite gumb <strong>Use this template</strong>.</li>
+<li>Ustvarite novo ime za vaš osebni repozitorij. Priporočljivo je, da uporabite svoje osebno ime, na primer: <strong>ime-priimek</strong>.</li>
+<li>Preverite, da je izbrana možnost <strong>Public repository</strong>, ter da je <strong>owner laboratorij-km</strong>, in kliknite <strong>Create repository</strong>.</li>
 </ol>
 <h2 id="2-kloniranje-repozitorija">2. Kloniranje repozitorija</h2>
-<ol>
-<li>Odprite terminal ali ukazno vrstico in klonirajte svoj novoustvarjeni repozitorij na lokalni računalnik:</li>
-</ol>
+<h3 id="1-odprite-terminal-ali-ukazno-vrstico-in-klonirajte-svoj-novoustvarjeni-repozitorij-na-lokalni-računalnik">1. Odprite terminal ali ukazno vrstico in klonirajte svoj novoustvarjeni repozitorij na lokalni računalnik:</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/laboratorij-km/ime-priimek.git
-</span></span></code></pre></div><ol start="2">
-<li>Premaknite se v imenik repozitorija:</li>
-</ol>
+</span></span></code></pre></div><h3 id="2-premaknite-se-v-imenik-repozitorija">2. Premaknite se v imenik repozitorija:</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ime-priimek
-</span></span></code></pre></div><h2 id="3-urejanje-osebne-vsebine">3. Urejanje osebne vsebine</h2>
+</span></span></code></pre></div><h3 id="3-omogočanje-github-pages-in-github-actions">3. Omogočanje GitHub Pages in GitHub Actions</h3>
+<ol>
+<li>Pojdite na nastavitve vašega repozitorija v GitHub.</li>
+<li>Izberite zavihek <strong>Pages</strong>.</li>
+<li>V razdelku Source izberite <strong>GitHub Actions</strong> kot vir za GitHub Pages.</li>
+</ol>
+<h2 id="3-urejanje-osebne-vsebine">3. Urejanje osebne vsebine</h2>
 <p>Vse spremembe boste izvajali znotraj svojega repozitorija. Vaša osebna stran v Hugo je zasnovana tako, da omogoča preprosto upravljanje vsebin. Spodaj so podana navodila za pisanje objav in nastavitev strani. Pri urejanju vsebine v Markdownu lahko uporabite HTML v Markdown converter-ji, kot je npr. <strong><a href="https://htmlmarkdown.com/">https://htmlmarkdown.com/</a></strong>, če imate vsebino v HTML obliki, ki jo želite pretvoriti.</p>
 <h3 id="1-urejanje-glavne-biografije">1. Urejanje glavne biografije</h3>
 <p>Glavna biografija vsakega člana je v datoteki <strong>content/_index.md</strong>. Ta datoteka predstavlja vašo domačo stran in vsebino, ki bo vidna ob obisku vašega profila.</p>
@@ -155,7 +177,16 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Opis slike</span>](<span style="color:#a6e22e">img.jpg</span>)
 </span></span><span style="display:flex;"><span>ali
 </span></span><span style="display:flex;"><span>![<span style="color:#f92672">Opis slike</span>](<span style="color:#a6e22e">img/img.jpg</span>)
-</span></span></code></pre></div><h3 id="4-urejanje-datoteke-hugotoml">4. Urejanje datoteke hugo.toml</h3>
+</span></span></code></pre></div><h4 id="dodajanje-datotek-in-slik-neposredno-iz-onedrive">Dodajanje datotek in slik neposredno iz OneDrive:</h4>
+<ol>
+<li>Če želite dodati slike ali datoteke iz OneDrive, pojdite na svojo datoteko v OneDrive in ustvarite <strong>embed</strong> link.</li>
+<li>To storite tako, da v OneDrive izberete datoteko, ter na vrhu strani izberite <strong>Embed</strong>.</li>
+<li>Kopirajte in prilepite povezvo v svojo markdown datoteko.</li>
+</ol>
+<p>Primer:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">FRI logo</span>](<span style="color:#a6e22e">https://1drv.ms/i/s!AnTtkNv__VGYgmWLhKoip-3jZL0j?embed=1&amp;width=620&amp;height=259</span>)
+</span></span></code></pre></div><p><img src="https://1drv.ms/i/s!AnTtkNv__VGYgmWLhKoip-3jZL0j?embed=1&amp;width=620&amp;height=259" alt="FRI logo"></p>
+<h3 id="4-urejanje-datoteke-hugotoml">4. Urejanje datoteke hugo.toml</h3>
 <p>Vsakič, ko dodate novo stran, morate posodobiti datoteko hugo.toml, da se nova stran prikaže v meniju. Poleg tega morate prilagoditi naslov, baseURL, in meni.</p>
 <h4 id="koraki-za-urejanje">Koraki za urejanje:</h4>
 <ol>

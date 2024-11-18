@@ -1,6 +1,5 @@
 +++
 title = 'Subject2'
-date = 2024-10-07T11:00:24+02:00
 draft = true
 +++
 

@@ -4,11 +4,31 @@ V tem dokumentu so navedena navodila, kako nastaviti in uporabljati svojo Hugo s
 
 ## 1. Kopiranje predloga repozitorija
 
+### A. Kako uporabiti privzeti predlog
+
 1. Prijavite se v GitHub in pojdite na GitHub organizacijo laboratorija.
 2. Odprite [predlogo Hugo strani](https://github.com/laboratorij-km/member-template), ki je na voljo v repozitoriju.
 3. Kliknite gumb **Use this template**.
 4. Ustvarite novo ime za vaš osebni repozitorij. Priporočljivo je, da uporabite svoje osebno ime, na primer: **ime-priimek**
 5. Preverite, da je izbrana možnost Public repository, ter da je **owner laboratorij-km** in kliknite Create repository
+
+### B. Kako omogočiti drugim članom uporabo vašega repozitorija kot predloge
+
+1. Prijavite se v GitHub in pojdite na GitHub organizacijo laboratorija.
+2. Odprite vaš repozitorij, ki ga želite omogočiti kot predlogo.
+3. Pojdite na **Settings** (nastavitve) vašega repozitorija.
+4. Pomaknite se navzdol do razdelka **Template repository** in označite možnost **This repository is a template**.
+5. Kliknite **Save changes**.
+
+Po tem bo vaš repozitorij na voljo kot predloga za druge člane laboratorija.
+
+### C. Kako uporabiti repozitorij drugega člana kot predlogo
+
+1. Prijavite se v GitHub in pojdite na GitHub organizacijo laboratorija.
+2. Odprite repozitorij, ki ga želite uporabiti kot predlogo.
+3. Kliknite gumb **Use this template**.
+4. Ustvarite novo ime za vaš osebni repozitorij. Priporočljivo je, da uporabite svoje osebno ime, na primer: **ime-priimek**.
+5. Preverite, da je izbrana možnost **Public repository**, ter da je **owner laboratorij-km**, in kliknite **Create repository**.
 
 ## 2. Kloniranje repozitorija
 
