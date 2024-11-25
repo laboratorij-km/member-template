@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>http://localhost:1313/ime-priimek/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/ime-priimek/lecturing/</loc>
-  </url><url>
-    <loc>http://localhost:1313/ime-priimek/</loc>
-  </url><url>
-    <loc>http://localhost:1313/ime-priimek/projects/project1/</loc>
-  </url><url>
-    <loc>http://localhost:1313/ime-priimek/projects/project2/</loc>
-  </url><url>
-    <loc>http://localhost:1313/ime-priimek/projects/</loc>
-  </url><url>
-    <loc>http://localhost:1313/ime-priimek/lecturing/subject1/</loc>
-  </url><url>
-    <loc>http://localhost:1313/ime-priimek/lecturing/subject2/</loc>
-  </url><url>
-    <loc>http://localhost:1313/ime-priimek/tags/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>http://localhost:1313/ime-priimek/en/sitemap.xml</loc>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://localhost:1313/ime-priimek/si/sitemap.xml</loc>
+    
+  </sitemap>
+  
+</sitemapindex>

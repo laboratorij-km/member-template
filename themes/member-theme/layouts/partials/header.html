@@ -13,9 +13,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="">
-        <a href="https://laboratorij-km.github.io/">
-          <img src="{{ "img/logos/lkm-logo.png" | relURL }}" alt="Faculty Logo"
-          class="img-fluid" style="max-height: 100px;">
+        <a href="{{ .Site.BaseURL }}{{ .Lang }}/">
+          <img src="{{ "img/logos/MLLT-logo.png" | relURL }}" alt="Faculty Logo"
+          class="img-fluid" style="max-height: 150px;">
         </a>
       </div>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -57,6 +57,20 @@
             </a>
           </li>
           {{ end }} {{ end }}
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+          {{ range $.Site.Home.AllTranslations }}
+          <li class="nav-item">
+            <a
+              class="nav-link {{ if eq .Language.Lang $.Site.Language.Lang }}lang-active{{ end }}"
+              href="{{ .RelPermalink }}"
+            >
+              <span class="flag-icon {{ .Language.Params.flag }}"></span> {{
+              .Language.LanguageName }}
+            </a>
+          </li>
+          {{ end }}
         </ul>
       </div>
       <div class="px-5 d-none d-lg-block">

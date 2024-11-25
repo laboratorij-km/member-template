@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html><head><script src="/ime-priimek/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=ime-priimek/livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="/ime-priimek/css/bootstrap.min.css" /> <link rel="stylesheet" type="text/css" href="/ime-priimek/css/style.css" />  
+  <title>Member Hugo Template | Member Template</title>
+</head>
+<body><div id="masthead" class="container-fluid border-bottom">
+  <div class="">
+    <nav class="navbar navbar-expand-lg">
+      <button
+        class="navbar-toggler mx-5"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="">
+        <a href="http://localhost:1313/ime-priimek/en/">
+          <img src="/ime-priimek/img/logos/MLLT-logo.png" alt="Faculty Logo"
+          class="img-fluid" style="max-height: 150px;">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav">
+            
+          <li class="nav-item">
+            <a
+              class='nav-link '
+              href="http://localhost:1313/ime-priimek/"
+            >
+              About
+            </a>
+          </li>
+            
+          <li class="nav-item">
+            <a
+              class='nav-link '
+              href="http://localhost:1313/ime-priimek/lecturing/"
+            >
+              Lecturing
+            </a>
+          </li>
+            
+          <li class="nav-item">
+            <a
+              class='nav-link '
+              href="http://localhost:1313/ime-priimek/projects/"
+            >
+              Projects
+            </a>
+          </li>
+           
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+          
+          <li class="nav-item">
+            <a
+              class="nav-link lang-active"
+              href="/ime-priimek/"
+            >
+              <span class="flag-icon "></span> 
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="px-5 d-none d-lg-block">
+        <img src="/ime-priimek/img/logos/fri_logo_trans.png" alt="Faculty
+        Logo" class="img-fluid" style="max-height: 100px;">
+      </div>
+    </nav>
+  </div>
+</div>
+<div id="content">
+
+<div class="container my-5">
+  <div class="row">
+    
+    <div class="col-lg-12"><h1 id="navodila-za-nastavitev-osebne-hugo-strani-laboratorija">Navodila za nastavitev osebne Hugo strani laboratorija</h1>
+<p>V tem dokumentu so navedena navodila, kako nastaviti in uporabljati svojo Hugo stran za laboratorij. Vsak član laboratorija bo imel svojo Hugo stran, ki bo gostovana pod domeno <strong>laboratorij-km.github.io/member_repository</strong>.</p>
+<h2 id="1-kopiranje-predloga-repozitorija">1. Kopiranje predloga repozitorija</h2>
+<h3 id="a-kako-uporabiti-privzeti-predlog">A. Kako uporabiti privzeti predlog</h3>
+<ol>
+<li>Prijavite se v GitHub in pojdite na GitHub organizacijo laboratorija.</li>
+<li>Odprite <a href="https://github.com/laboratorij-km/member-template">predlogo Hugo strani</a>, ki je na voljo v repozitoriju.</li>
+<li>Kliknite gumb <strong>Use this template</strong>.</li>
+<li>Ustvarite novo ime za vaš osebni repozitorij. Priporočljivo je, da uporabite svoje osebno ime, na primer: <strong>ime-priimek</strong></li>
+<li>Preverite, da je izbrana možnost Public repository, ter da je <strong>owner laboratorij-km</strong> in kliknite Create repository</li>
+</ol>
+<h3 id="b-kako-omogočiti-drugim-članom-uporabo-vašega-repozitorija-kot-predloge">B. Kako omogočiti drugim članom uporabo vašega repozitorija kot predloge</h3>
+<ol>
+<li>Prijavite se v GitHub in pojdite na GitHub organizacijo laboratorija.</li>
+<li>Odprite vaš repozitorij, ki ga želite omogočiti kot predlogo.</li>
+<li>Pojdite na <strong>Settings</strong> (nastavitve) vašega repozitorija.</li>
+<li>Pomaknite se navzdol do razdelka <strong>Template repository</strong> in označite možnost <strong>This repository is a template</strong>.</li>
+<li>Kliknite <strong>Save changes</strong>.</li>
+</ol>
+<p>Po tem bo vaš repozitorij na voljo kot predloga za druge člane laboratorija.</p>
+<h3 id="c-kako-uporabiti-repozitorij-drugega-člana-kot-predlogo">C. Kako uporabiti repozitorij drugega člana kot predlogo</h3>
+<ol>
+<li>Prijavite se v GitHub in pojdite na GitHub organizacijo laboratorija.</li>
+<li>Odprite repozitorij, ki ga želite uporabiti kot predlogo.</li>
+<li>Kliknite gumb <strong>Use this template</strong>.</li>
+<li>Ustvarite novo ime za vaš osebni repozitorij. Priporočljivo je, da uporabite svoje osebno ime, na primer: <strong>ime-priimek</strong>.</li>
+<li>Preverite, da je izbrana možnost <strong>Public repository</strong>, ter da je <strong>owner laboratorij-km</strong>, in kliknite <strong>Create repository</strong>.</li>
+</ol>
+<h2 id="2-kloniranje-repozitorija">2. Kloniranje repozitorija</h2>
+<h3 id="1-odprite-terminal-ali-ukazno-vrstico-in-klonirajte-svoj-novoustvarjeni-repozitorij-na-lokalni-računalnik">1. Odprite terminal ali ukazno vrstico in klonirajte svoj novoustvarjeni repozitorij na lokalni računalnik:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/laboratorij-km/ime-priimek.git
+</span></span></code></pre></div><h3 id="2-premaknite-se-v-imenik-repozitorija">2. Premaknite se v imenik repozitorija:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ime-priimek
+</span></span></code></pre></div><h3 id="3-omogočanje-github-pages-in-github-actions">3. Omogočanje GitHub Pages in GitHub Actions</h3>
+<ol>
+<li>Pojdite na nastavitve vašega repozitorija v GitHub.</li>
+<li>Izberite zavihek <strong>Pages</strong>.</li>
+<li>V razdelku Source izberite <strong>GitHub Actions</strong> kot vir za GitHub Pages.</li>
+</ol>
+<h2 id="3-urejanje-osebne-vsebine">3. Urejanje osebne vsebine</h2>
+<p>Vse spremembe boste izvajali znotraj svojega repozitorija. Vaša osebna stran v Hugo je zasnovana tako, da omogoča preprosto upravljanje vsebin. Spodaj so podana navodila za pisanje objav in nastavitev strani. Pri urejanju vsebine v Markdownu lahko uporabite HTML v Markdown converter-ji, kot je npr. <strong><a href="https://htmlmarkdown.com/">https://htmlmarkdown.com/</a></strong>, če imate vsebino v HTML obliki, ki jo želite pretvoriti.</p>
+<h3 id="1-urejanje-glavne-biografije">1. Urejanje glavne biografije</h3>
+<p>Glavna biografija vsakega člana je v datoteki <strong>content/_index.md</strong>. Ta datoteka predstavlja vašo domačo stran in vsebino, ki bo vidna ob obisku vašega profila.</p>
+<h4 id="kako-urediti-biografijo">Kako urediti biografijo:</h4>
+<ol>
+<li>Odprite datoteko <strong>content/_index.md</strong>.</li>
+<li>Vnesite ali uredite svojo biografijo. Uporabite Markdown za formatiranje besedila.</li>
+</ol>
+<p>Primer vsebine:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = &#34;Ime Priimek&#34;
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Dobrodošli
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Sem Ime Priimek, raziskovalec v Laboratoriju za kognitivno modeliranje.
+</span></span></code></pre></div><h3 id="2-ustvarjanje-novih-strani">2. Ustvarjanje novih strani</h3>
+<p>Vsaka dodatna stran, ki jo želite imeti na svojem profilu, potrebuje svojo mapo in datoteko _index.md.</p>
+<h4 id="koraki-za-ustvarjanje-nove-strani">Koraki za ustvarjanje nove strani:</h4>
+<ol>
+<li>Če želite ustvariti novo stran, na primer <strong>&ldquo;Lecturing&rdquo;</strong>, ustvarite naslednjo strukturo:
+<ul>
+<li><strong>content/lecturing/_index.md</strong></li>
+</ul>
+</li>
+<li>Za vsako podstran znotraj te strani (npr. posamezni predmeti) lahko ustvarite dodatne datoteke, na primer:
+<ul>
+<li><strong>content/lecturing/subject1.md</strong></li>
+</ul>
+</li>
+</ol>
+<h4 id="primer-nove-strani-lecturing">Primer nove strani <strong>&ldquo;Lecturing&rdquo;</strong></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new content/lecturing/_index.md
+</span></span></code></pre></div><h4 id="vsebina-contentlecturing_indexmd">Vsebina <strong>content/lecturing/_index.md</strong>:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = &#34;Lecturing&#34;
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Moji predmeti
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Tukaj so navedeni predmeti, ki jih predavam.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">1.</span> [<span style="color:#f92672">Subject 1</span>](<span style="color:#a6e22e"></span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">2.</span> [<span style="color:#f92672">Subject 2</span>](<span style="color:#a6e22e"></span>)
+</span></span></code></pre></div><h4 id="vsebina-contentlecturingsubject1md">Vsebina <strong>content/lecturing/subject1.md</strong>:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title = &#34;Predmet 1&#34;
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Opis predmeta 1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Podroben opis predmeta.
+</span></span></code></pre></div><h3 id="3-dodajanje-datotek-in-slik">3. Dodajanje datotek in slik</h3>
+<p>Vsaka stran na vašem profilu naj vsebuje pripadajoče datoteke, kot so slike, v isti mapi, kjer se nahaja vsebina strani. Na ta način bodo slike in druge datoteke ustrezno povezane s posamezno stranjo.</p>
+<h4 id="koraki-za-dodajanje-slik-na-stran">Koraki za dodajanje slik na stran:</h4>
+<ol>
+<li>Če želite dodati sliko na stran, na primer na glavno stran Lecturing (content/lecturing/_index.md), morate sliko shraniti v isto mapo.</li>
+</ol>
+<ul>
+<li>Primer: <strong>content/lecturing/img.jpg</strong> ali <strong>content/lecturing/images/img.jpg</strong></li>
+</ul>
+<ol start="2">
+<li>Nato v vaši Markdown datoteki (npr. <strong>content/lecturing/_index.md</strong>) vključite sliko z naslednjim ukazom:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">Opis slike</span>](<span style="color:#a6e22e">img.jpg</span>)
+</span></span><span style="display:flex;"><span>ali
+</span></span><span style="display:flex;"><span>![<span style="color:#f92672">Opis slike</span>](<span style="color:#a6e22e">img/img.jpg</span>)
+</span></span></code></pre></div><h4 id="dodajanje-datotek-in-slik-neposredno-iz-onedrive">Dodajanje datotek in slik neposredno iz OneDrive:</h4>
+<ol>
+<li>Če želite dodati slike ali datoteke iz OneDrive, pojdite na svojo datoteko v OneDrive in ustvarite <strong>embed</strong> link.</li>
+<li>To storite tako, da v OneDrive izberete datoteko, ter na vrhu strani izberite <strong>Embed</strong>.</li>
+<li>Kopirajte in prilepite povezvo v svojo markdown datoteko.</li>
+</ol>
+<p>Primer:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">FRI logo</span>](<span style="color:#a6e22e">https://1drv.ms/i/s!AnTtkNv__VGYgmWLhKoip-3jZL0j?embed=1&amp;width=620&amp;height=259</span>)
+</span></span></code></pre></div><p><img src="https://1drv.ms/i/s!AnTtkNv__VGYgmWLhKoip-3jZL0j?embed=1&amp;width=620&amp;height=259" alt="FRI logo"></p>
+<h3 id="4-urejanje-datoteke-hugotoml">4. Urejanje datoteke hugo.toml</h3>
+<p>Vsakič, ko dodate novo stran, morate posodobiti datoteko hugo.toml, da se nova stran prikaže v meniju. Poleg tega morate prilagoditi naslov, baseURL, in meni.</p>
+<h4 id="koraki-za-urejanje">Koraki za urejanje:</h4>
+<ol>
+<li>Odprite datoteko <strong>hugo.toml</strong> v korenu svojem repozitoriju.</li>
+<li>Spremenite osnovne nastavitve strani:
+<ul>
+<li><strong>baseURL</strong>: Tukaj vnesite URL vašega repozitorija. Nadomestite ime-priimek z imenom vašega repozitorija.</li>
+<li><strong>title</strong>: Vnesite naslov svoje strani.</li>
+<li><strong>menu</strong>: Dodajte nove strani v meni.</li>
+</ul>
+</li>
+</ol>
+<h4 id="dodajanje-novega-menija">Dodajanje novega menija:</h4>
+<p>Če želite dodati novo stran v meni, na primer za &ldquo;Raziskave&rdquo;, ki se nahaja v <strong>content/research/_index.md</strong>, v datoteko hugo.toml dodajte nov vnos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Raziskave&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/research/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
+</span></span></code></pre></div><h4 id="primer-urejene-datoteke-hugotoml">Primer urejene datoteke <strong>hugo.toml</strong>:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;https://laboratorij-km.github.io/ime-priimek/&#39;</span>  <span style="color:#75715e"># Spremenite ime repozitorija</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#39;en-us&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;Ime Priimek&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;member-theme&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">menu</span>]
+</span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Home&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Lecturing&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/lecturing/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Projekti&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/projects/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">3</span>
+</span></span></code></pre></div><h3 id="5-testiranje-lokalnih-sprememb">5. Testiranje lokalnih sprememb</h3>
+<p>Preden pošljete svoje spremembe v GitHub, je priporočljivo, da svojo stran preizkusite lokalno z ukazom Hugo, kar vam omogoča hitrejši pregled in odkrivanje morebitnih napak.</p>
+<h4 id="51-uporaba-hugo-server">5.1 Uporaba &ldquo;hugo server&rdquo;</h4>
+<p>Ukaz <strong>&ldquo;hugo server&rdquo;</strong> vam omogoča, da zaženete lokalni strežnik, kjer lahko pregledate svojo stran, ne da bi jo objavili.</p>
+<p><strong>Kako uporabiti hugo server:</strong></p>
+<ol>
+<li>Odprite terminal ali ukazno vrstico v korenskem direktoriju vašega Hugo repozitorija.</li>
+<li>Zaženite naslednji ukaz:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>Ta ukaz bo ustvaril lokalni strežnik, ki bo na voljo na naslovu http://localhost:1313/. Stran bo samodejno osvežena, če boste v datotekah izvedli spremembe. To vam omogoča hitrejše testiranje vsebine.</p>
+<h4 id="52-uporaba-hugo-server--d">5.2 Uporaba &ldquo;hugo server -D&rdquo;</h4>
+<p>Ko razvijate novo vsebino, lahko želite testirati strani ali objave, ki še niso objavljene, ker so označene kot osnutki. V ta namen uporabite ukaz <strong>&ldquo;hugo server -D&rdquo;</strong>, ki omogoča prikaz osnutkov.</p>
+<p><strong>Kako uporabiti &ldquo;hugo server -D&rdquo;:</strong></p>
+<ol>
+<li>Če imate osnutke, ki jih želite pregledati pred objavo, zaženite naslednji ukaz:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server -D
+</span></span></code></pre></div><p>S tem ukazom bodo vidne tudi vse strani ali objave, ki imajo v svojem frontmatter parametru draft = true.</p>
+<h4 id="53-kaj-pomeni-parameter-draft">5.3 Kaj pomeni parameter &ldquo;draft&rdquo;?</h4>
+<p>V vsaki objavi ali strani, ki jo ustvarite v Hugo, lahko uporabite parameter draft, ki določa, ali je stran pripravljena za objavo ali je še v fazi osnutka.</p>
+<p>Primer parametra <strong>draft</strong> v frontmatter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = &#34;Moj prvi projekt&#34;
+</span></span><span style="display:flex;"><span>date = 2024-10-10
+</span></span><span style="display:flex;"><span>draft = true
+</span></span><span style="display:flex;"><span>+++
+</span></span></code></pre></div><ul>
+<li>Če je <strong>draft = true</strong>, bo stran skrita in ne bo objavljena na produkcijski strani.</li>
+<li>Če je <strong>draft = false</strong>, bo stran vidna in objavljena na vaši spletni strani.</li>
+</ul>
+<p>Ko ste pripravljeni, da stran objavite, preprosto spremenite vrednost parametra <strong>draft</strong> na <strong>false</strong>, nato pa lahko svojo stran testirate lokalno z hugo server ali naložite spremembe na GitHub.</p>
+<h2 id="4-dodajanje-profila-v-glavni-repozitorij">4. Dodajanje profila v glavni repozitorij</h2>
+<ol>
+<li>Pojdite na glavni repozitorij laboratorija laboratorij-km.github.io.</li>
+<li>Poiščite datoteko <strong>data/members.yaml</strong>, kjer se hranijo podatki o vseh članih laboratorija.</li>
+<li>Dodajte svoje podatke, kot v spodnjem primeru:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">staff_members</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Ime Priimek&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">bio</span>: <span style="color:#e6db74">&#34;Vaša kratka biografija.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#e6db74">&#34;img/people/vaša_slika.jpg&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">contact</span>: <span style="color:#e6db74">&#34;vaš_email@example.com&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">relurl</span>: <span style="color:#e6db74">&#34;ime-priimek/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">phone</span>: <span style="color:#ae81ff">vaša telefonska številka</span>
+</span></span></code></pre></div><ol start="4">
+<li>V datoteko <strong>static/img/people/</strong> dodajte svojo sliko profila. Prepričajte se, da ime slike ustreza tistemu, kar ste vnesli v <strong>data/members.yaml</strong>.</li>
+</ol>
+<h2 id="5-github-actions-samodejna-gradnja-in-objava">5. GitHub Actions: Samodejna gradnja in objava</h2>
+<p>Ko naredite spremembe na svoji strani in jih naložite v GitHub, ni potrebno ročno graditi strani ali jih nalagati na strežnik. Za to skrbi datoteka z GitHub Actions, ki se nahaja v <strong>.github/workflows/hugo.yaml</strong>.</p>
+<h3 id="kaj-dela-ta-datoteka">Kaj dela ta datoteka:</h3>
+<ul>
+<li>
+<p>Ob vsakem &ldquo;push&rdquo; na glavno vejo (<strong>main</strong>) se vaša stran samodejno zgradi in objavi.</p>
+</li>
+<li>
+<p>Uporablja Hugo za gradnjo statične strani in jo nato objavi na GitHub Pages.</p>
+</li>
+<li>
+<p>Postopek zajema namestitev Hugo, sestavo statične strani in objavo na GitHub Pages, kjer bo vaša stran dostopna.</p>
+</li>
+</ul>
+<p>Zato vam ni treba skrbeti za ročno upravljanje strežnika ali nalaganje strani. Vse se dogaja samodejno ob vsaki spremembi, ki jo pošljete v svoj repozitorij.</p>
+<h2 id="6-posodabljanje-in-objavljanje">6. Posodabljanje in objavljanje</h2>
+<p>Po urejanju datotek in ustvarjanju novih vsebin, zaženite naslednje ukaze, da pošljete spremembe v repozitorij:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Dodana nova stran in objava&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span></code></pre></div><p>To bo sprožilo postopek gradnje in objave preko GitHub Actions. Vaša stran bo posodobljena in dostopna na naslovu: <a href="https://laboratorij-km.github.io/ime-priimek/">https://laboratorij-km.github.io/ime-priimek/</a>.</p>
+</div>
+  </div>
+</div>
+
+</div><script src="/ime-priimek/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

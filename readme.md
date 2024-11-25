@@ -54,13 +54,17 @@ cd ime-priimek
 
 Vse spremembe boste izvajali znotraj svojega repozitorija. Vaša osebna stran v Hugo je zasnovana tako, da omogoča preprosto upravljanje vsebin. Spodaj so podana navodila za pisanje objav in nastavitev strani. Pri urejanju vsebine v Markdownu lahko uporabite HTML v Markdown converter-ji, kot je npr. **[https://htmlmarkdown.com/](https://htmlmarkdown.com/)**, če imate vsebino v HTML obliki, ki jo želite pretvoriti.
 
-### 1. Urejanje glavne biografije
+### 3.1. Urejanje glavne biografije
 
 Glavna biografija vsakega člana je v datoteki **content/\_index.md**. Ta datoteka predstavlja vašo domačo stran in vsebino, ki bo vidna ob obisku vašega profila.
+V primeru **večjezične vsebine** se glavna biografija nahaja v datotekah, specifičnih za posamezen jezik. Na primer:
+
+- Za angleško različico: **content/english/\_index.md**
+- Za slovensko različico: **content/slovene/\_index.md**
 
 #### Kako urediti biografijo:
 
-1. Odprite datoteko **content/\_index.md**.
+1. Odprite datoteko **content/\_index.md** (ali ustrezno datoteko za vaš jezik).
 2. Vnesite ali uredite svojo biografijo. Uporabite Markdown za formatiranje besedila.
 
 Primer vsebine:
@@ -75,21 +79,21 @@ title = "Ime Priimek"
 Sem Ime Priimek, raziskovalec v Laboratoriju za kognitivno modeliranje.
 ```
 
-### 2. Ustvarjanje novih strani
+### 3.2. Ustvarjanje novih strani
 
 Vsaka dodatna stran, ki jo želite imeti na svojem profilu, potrebuje svojo mapo in datoteko \_index.md.
 
 #### Koraki za ustvarjanje nove strani:
 
 1. Če želite ustvariti novo stran, na primer **"Lecturing"**, ustvarite naslednjo strukturo:
-   - **content/lecturing/\_index.md**
+   - **content/lecturing/\_index.md** (ali ustrezno datoteko za vaš jezik, npr. **content/english/\_index.md**)
 2. Za vsako podstran znotraj te strani (npr. posamezni predmeti) lahko ustvarite dodatne datoteke, na primer:
-   - **content/lecturing/subject1.md**
+   - **content/lecturing/subject1.md** (ali ustrezno datoteko za vaš jezik, npr. **content/english/lecturing/subject1.md**)
 
 #### Primer nove strani **"Lecturing"**
 
 ```bash
-hugo new content/lecturing/_index.md
+hugo new content/lecturing/_index.md  // hugo new content/english/lecturing/_index.md
 ```
 
 #### Vsebina **content/lecturing/\_index.md**:
@@ -119,7 +123,7 @@ title = "Predmet 1"
 Podroben opis predmeta.
 ```
 
-### 3. Dodajanje datotek in slik
+### 3.3. Dodajanje datotek in slik
 
 Vsaka stran na vašem profilu naj vsebuje pripadajoče datoteke, kot so slike, v isti mapi, kjer se nahaja vsebina strani. Na ta način bodo slike in druge datoteke ustrezno povezane s posamezno stranjo.
 
@@ -200,11 +204,71 @@ theme = "member-theme"
 
 ```
 
-### 5. Testiranje lokalnih sprememb
+#### Urejanje datoteke hugo.toml za večjezično vsebino
+
+Če želite omogočiti večjezično podporo za svojo stran, boste morali nastaviti jezike v datoteki hugo.toml. V spodnjem primeru so nastavljeni jeziki za angleščino (en) in slovenščino (si).
+
+Primer za angleški in slovenski jezik:
+
+```toml
+baseURL = 'https://laboratorij-km.github.io/ime-priimek/'  # Spremenite ime repozitorija
+title = 'Ime Priimek'
+theme = "member-theme"
+[languages]
+  [languages.en]
+    contentDir = 'content/english'
+    languageName = 'English'
+    weight = 10
+    [languages.en.params]
+      flag = "flag-icon-us"
+    [languages.en.menus]
+      [[languages.en.menus.main]]
+        name = "About"
+        url = "/"
+        weight = 100
+      [[languages.en.menus.main]]
+        name = "Lecturing"
+        url = "/lecturing/"
+        weight = 200
+      [[languages.en.menus.main]]
+        name = "Projects"
+        url = "/projects/"
+        weight = 300
+
+  [languages.si]
+    contentDir = 'content/slovene'
+    languageName = 'Slovene'
+    weight = 10
+    [languages.si.params]
+      flag = "flag-icon-si"
+    [languages.si.menus]
+      [[languages.si.menus.main]]
+        name = "O meni"
+        url = "/si/"
+        weight = 100
+      [[languages.si.menus.main]]
+        name = "Poučevanje"
+        url = "/si/lecturing/"
+        weight = 200
+      [[languages.si.menus.main]]
+        name = "Projekti"
+        url = "/si/projects/"
+        weight = 300
+```
+
+V tem primeru so nastavljeni jezikovni nastavitvi za angleščino in slovenščino z ustreznimi mapami za vsebino **content/english** in **content/slovene**. Vsak jezik ima svojo kodo zastave (npr. flag-icon-us za angleščino in flag-icon-si za slovenščino). Vsak jezik ima tudi svojo različico menija, kjer so se imena strani prevedena v ustrezni jezik.
+
+Navodila za večjezične strani:
+
+1. Ustvarite mapo za jezik: V glavni mapi content ustvarite mapo za vsak jezik, na primer **content/english** za angleščino in **content/slovene** za slovenščino.
+2. Ustvarite vsebino za vsak jezik: Za vsako stran, ki jo želite prevesti, ustvarite različico v ustrezni jezikovni mapi. Na primer, stran about.md bo v **content/english/about.md** in **content/slovene/about.md.**
+3. Dodajte ustrezne povezave: Prepričajte se, da so vsi meniji pravilno nastavljeni v hugo.toml za vsak jezik.
+
+## 4. Testiranje lokalnih sprememb
 
 Preden pošljete svoje spremembe v GitHub, je priporočljivo, da svojo stran preizkusite lokalno z ukazom Hugo, kar vam omogoča hitrejši pregled in odkrivanje morebitnih napak.
 
-#### 5.1 Uporaba "hugo server"
+### 4.1 Uporaba "hugo server"
 
 Ukaz **"hugo server"** vam omogoča, da zaženete lokalni strežnik, kjer lahko pregledate svojo stran, ne da bi jo objavili.
 
@@ -219,7 +283,7 @@ hugo server
 
 Ta ukaz bo ustvaril lokalni strežnik, ki bo na voljo na naslovu http://localhost:1313/. Stran bo samodejno osvežena, če boste v datotekah izvedli spremembe. To vam omogoča hitrejše testiranje vsebine.
 
-#### 5.2 Uporaba "hugo server -D"
+#### 4.2 Uporaba "hugo server -D"
 
 Ko razvijate novo vsebino, lahko želite testirati strani ali objave, ki še niso objavljene, ker so označene kot osnutki. V ta namen uporabite ukaz **"hugo server -D"**, ki omogoča prikaz osnutkov.
 
@@ -233,7 +297,7 @@ hugo server -D
 
 S tem ukazom bodo vidne tudi vse strani ali objave, ki imajo v svojem frontmatter parametru draft = true.
 
-#### 5.3 Kaj pomeni parameter "draft"?
+#### 4.3 Kaj pomeni parameter "draft"?
 
 V vsaki objavi ali strani, ki jo ustvarite v Hugo, lahko uporabite parameter draft, ki določa, ali je stran pripravljena za objavo ali je še v fazi osnutka.
 
@@ -252,7 +316,7 @@ draft = true
 
 Ko ste pripravljeni, da stran objavite, preprosto spremenite vrednost parametra **draft** na **false**, nato pa lahko svojo stran testirate lokalno z hugo server ali naložite spremembe na GitHub.
 
-## 4. Dodajanje profila v glavni repozitorij
+## 5. Dodajanje profila v glavni repozitorij
 
 1. Pojdite na glavni repozitorij laboratorija laboratorij-km.github.io.
 2. Poiščite datoteko **data/members.yaml**, kjer se hranijo podatki o vseh članih laboratorija.
@@ -270,7 +334,7 @@ staff_members:
 
 4. V datoteko **static/img/people/** dodajte svojo sliko profila. Prepričajte se, da ime slike ustreza tistemu, kar ste vnesli v **data/members.yaml**.
 
-## 5. GitHub Actions: Samodejna gradnja in objava
+## 6. GitHub Actions: Samodejna gradnja in objava
 
 Ko naredite spremembe na svoji strani in jih naložite v GitHub, ni potrebno ročno graditi strani ali jih nalagati na strežnik. Za to skrbi datoteka z GitHub Actions, ki se nahaja v **.github/workflows/hugo.yaml**.
 
@@ -284,7 +348,7 @@ Ko naredite spremembe na svoji strani in jih naložite v GitHub, ni potrebno ro�
 
 Zato vam ni treba skrbeti za ročno upravljanje strežnika ali nalaganje strani. Vse se dogaja samodejno ob vsaki spremembi, ki jo pošljete v svoj repozitorij.
 
-## 6. Posodabljanje in objavljanje
+## 7. Posodabljanje in objavljanje
 
 Po urejanju datotek in ustvarjanju novih vsebin, zaženite naslednje ukaze, da pošljete spremembe v repozitorij:
 
