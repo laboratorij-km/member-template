@@ -1,10 +1,10 @@
 baseURL = 'https://laboratorij-km.github.io/ime-priimek/' # change member_repository to your repository name
 # languageCode = 'en-us'
-title = 'Member Hugo Template'
 theme = "member-theme"
 
 [languages]
   [languages.en]
+    title = 'MLLT'
     contentDir = 'content/english'
     languageName = 'English'
     weight = 10
@@ -25,8 +25,9 @@ theme = "member-theme"
         weight = 300
 
   [languages.si]
+    title = 'SUJT'
     contentDir = 'content/slovene'
-    languageName = 'Slovene'
+    languageName = 'Slovenščina'
     weight = 10
     [languages.si.params]
       flag = "flag-icon-si"

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lecturing on Member Hugo Template</title>
+    <title>Lecturing on SUJT</title>
     <link>http://localhost:1313/ime-priimek/si/lecturing/</link>
-    <description>Recent content in Lecturing on Member Hugo Template</description>
+    <description>Recent content in Lecturing on SUJT</description>
     <generator>Hugo</generator>
     <language>si</language>
     <atom:link href="http://localhost:1313/ime-priimek/si/lecturing/index.xml" rel="self" type="application/rss+xml" />
